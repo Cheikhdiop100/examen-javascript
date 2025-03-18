@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de CV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Générateur de CV</h1>
+        <form id="cv-form">
+            <label>Photo de profil :</label>
+            <input type="file" id="photo" accept="image/*" onchange="previewPhoto()">
+            
+            <label>Nom :</label>
+            <input type="text" id="lastname" placeholder="Votre nom" required>
+            
+            <label>Prénom :</label>
+            <input type="text" id="firstname" placeholder="Votre prénom" required>
+            
+            <label>Date de naissance :</label>
+            <input type="date" id="birthdate">
+            
+            <label>Lieu de naissance :</label>
+            <input type="text" id="birthplace" placeholder="Ex : Dakar, Sénégal">
+            
+            <label>Email :</label>
+            <input type="email" id="email" placeholder="Ex : exemple@mail.com">
+            
+            <label>Téléphone :</label>
+            <input type="tel" id="phone" placeholder="Ex : +221 77 123 45 67">
+            
+            <label>Poste souhaité :</label>
+            <input type="text" id="job" placeholder="Ex : Développeur Web">
+            
+            <label>Expérience professionnelle :</label>
+            <textarea id="experience" placeholder="Décrivez vos expériences"></textarea>
+            
+            <label>Compétences :</label>
+            <input type="text" id="skills" placeholder="Ex : HTML, CSS, JavaScript">
+            
+            <label>Éducation :</label>
+            <input type="text" id="education" placeholder="Ex : Licence en Informatique - Université XYZ">
+            
+            <button type="button" onclick="generateCV()">Générer le CV</button>
+        </form>
+        
+        <div id="cv-preview">
+            <img id="cv-photo" src="" alt="Photo de profil" style="display: none;">
+            <h2><span id="cv-lastname"></span> <span id="cv-firstname"></span></h2>
+            <p id="cv-birthdate"></p>
+            <p id="cv-birthplace"></p>
+            <p id="cv-email"></p>
+            <p id="cv-phone"></p>
+            <h3 id="cv-job"></h3>
+            <p><strong>Expérience :</strong> <span id="cv-experience"></span></p>
+            <p><strong>Compétences :</strong> <span id="cv-skills"></span></p>
+            <p><strong>Éducation :</strong> <span id="cv-education"></span></p>
+            <button onclick="downloadPDF()">Télécharger en PDF</button>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

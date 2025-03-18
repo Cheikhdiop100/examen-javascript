@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #2acdea;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  margin-bottom: 30px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#cv-preview {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Empêche le débordement */
+}
+
+#cv-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 20px;
+  float: right;  /* Positionne la photo à droite */
+}
+
+#cv-preview h2 {
+  overflow: hidden; /* Empêche le texte de déborder autour de l'image */
+}
+
+#cv-lastname, #cv-firstname {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#cv-job {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#cv-experience, #cv-skills, #cv-education {
+  margin-bottom: 10px;
+}
+
+#cv-preview button {
+  margin-top: 20px;
+}
